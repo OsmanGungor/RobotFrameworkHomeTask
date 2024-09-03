@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-09-01T15:53:48.717932" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="C:\Users\osman_ysjxirg\PycharmProjects\RobotFrameworkHomeTask\Tests\login_tests.robot">
+<kw name="Open Browser And Signup" owner="CommonKeywords" type="SETUP">
+<msg time="2024-09-01T15:53:55.887659" level="INFO">Ending keyword: CommonKeywords.Open Browser And Signup</msg>
+<msg time="2024-09-01T15:53:55.887659" level="INFO">Keyword tags: []</msg>
+<msg time="2024-09-01T15:53:55.887659" level="INFO">Ending keyword: CommonKeywords.Open Browser And Signup</msg>
+<msg time="2024-09-01T15:53:55.887659" level="INFO">Keyword tags: []</msg>
+<arg>${USER_NAME}</arg>
+<arg>${USER_PASS}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2024-09-01T15:53:49.034321" elapsed="6.853338"/>
+</kw>
+<test id="s1-t1" name="Open Index Page and Log In" line="14">
+<kw name="Click Login" owner="CommonKeywords">
+<msg time="2024-09-01T15:53:58.526964" level="INFO">Ending keyword: CommonKeywords.Click Login</msg>
+<msg time="2024-09-01T15:53:58.526964" level="INFO">Keyword tags: ['screenshot']</msg>
+<msg time="2024-09-01T15:53:58.703631" level="INFO">Screenshot taken: screenshots\screenshot_20240901_155358.png</msg>
+<msg time="2024-09-01T15:53:58.703666" level="INFO">Ending keyword: CommonKeywords.Click Login</msg>
+<msg time="2024-09-01T15:53:58.703666" level="INFO">Keyword tags: ['screenshot']</msg>
+<msg time="2024-09-01T15:53:58.853569" level="INFO">Screenshot taken: screenshots\screenshot_20240901_155358.png</msg>
+<tag>screenshot</tag>
+<status status="PASS" start="2024-09-01T15:53:55.887659" elapsed="2.639305"/>
+</kw>
+<kw name="Assert Login Textboxes" owner="CommonKeywords">
+<msg time="2024-09-01T15:53:58.884369" level="INFO">Ending keyword: CommonKeywords.Assert Login Textboxes</msg>
+<msg time="2024-09-01T15:53:58.884369" level="INFO">Keyword tags: []</msg>
+<msg time="2024-09-01T15:53:58.884369" level="INFO">Ending keyword: CommonKeywords.Assert Login Textboxes</msg>
+<msg time="2024-09-01T15:53:58.884369" level="INFO">Keyword tags: []</msg>
+<status status="PASS" start="2024-09-01T15:53:58.853569" elapsed="0.030800"/>
+</kw>
+<kw name="Populate Login Popup Click" owner="CommonKeywords">
+<msg time="2024-09-01T15:54:01.293692" level="INFO">Ending keyword: CommonKeywords.Populate Login Popup Click</msg>
+<msg time="2024-09-01T15:54:01.293692" level="INFO">Keyword tags: []</msg>
+<msg time="2024-09-01T15:54:01.293692" level="INFO">Ending keyword: CommonKeywords.Populate Login Popup Click</msg>
+<msg time="2024-09-01T15:54:01.293692" level="INFO">Keyword tags: []</msg>
+<arg>${USER_NAME}</arg>
+<arg>${USER_PASS}</arg>
+<status status="PASS" start="2024-09-01T15:53:58.884369" elapsed="2.409323"/>
+</kw>
+<kw name="Get Welcome Text" owner="CommonKeywords">
+<msg time="2024-09-01T15:54:01.343683" level="INFO">${actual_text} = Welcome admin</msg>
+<msg time="2024-09-01T15:54:01.343683" level="INFO">Ending keyword: CommonKeywords.Get Welcome Text</msg>
+<msg time="2024-09-01T15:54:01.343683" level="INFO">Keyword tags: ['screenshot']</msg>
+<msg time="2024-09-01T15:54:01.523624" level="INFO">Screenshot taken: screenshots\screenshot_20240901_155401.png</msg>
+<msg time="2024-09-01T15:54:01.523624" level="INFO">Ending keyword: CommonKeywords.Get Welcome Text</msg>
+<msg time="2024-09-01T15:54:01.523624" level="INFO">Keyword tags: ['screenshot']</msg>
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Screenshot taken: screenshots\screenshot_20240901_155401.png</msg>
+<var>${actual_text}</var>
+<tag>screenshot</tag>
+<status status="PASS" start="2024-09-01T15:54:01.293692" elapsed="0.049991"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-01T15:54:01.673430" level="INFO">${expected_text} = Welcome admin</msg>
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Ending keyword: BuiltIn.Evaluate</msg>
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Keyword tags: []</msg>
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Ending keyword: BuiltIn.Evaluate</msg>
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Keyword tags: []</msg>
+<var>${expected_text}</var>
+<arg>"Welcome {}".format('${USER_NAME}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-01T15:54:01.673430" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Ending keyword: BuiltIn.Should Be Equal</msg>
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Keyword tags: []</msg>
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Ending keyword: BuiltIn.Should Be Equal</msg>
+<msg time="2024-09-01T15:54:01.673430" level="INFO">Keyword tags: []</msg>
+<arg>${actual_text}</arg>
+<arg>${expected_text}</arg>
+<arg>case_insensitive=True</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-01T15:54:01.673430" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-01T15:53:55.887659" elapsed="5.785771"/>
+</test>
+<kw name="Close Browser" owner="CommonKeywords" type="TEARDOWN">
+<msg time="2024-09-01T15:54:03.890317" level="INFO">Ending keyword: CommonKeywords.Close Browser</msg>
+<msg time="2024-09-01T15:54:03.890317" level="INFO">Keyword tags: []</msg>
+<msg time="2024-09-01T15:54:03.890317" level="INFO">Ending keyword: CommonKeywords.Close Browser</msg>
+<msg time="2024-09-01T15:54:03.890317" level="INFO">Keyword tags: []</msg>
+<status status="PASS" start="2024-09-01T15:54:01.673430" elapsed="2.216887"/>
+</kw>
+<status status="PASS" start="2024-09-01T15:53:48.749179" elapsed="15.141138"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Tests">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
